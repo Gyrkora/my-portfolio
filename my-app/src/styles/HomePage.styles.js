@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
 export const HomePageContainer = styled.div`
-	h2 {
-		color: white;
-	}
+	margin: 0 100px 0 100px;
 `
