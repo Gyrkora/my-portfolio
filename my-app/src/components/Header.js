@@ -13,7 +13,6 @@ const Header = () => {
 				bColor={'#A93F55'}
 				pX={'20rem'}
 				label={'Contact me'}
-				onClick={() => console.log('ir a cart')}
 			></ButtonOriginal>
 		</HeaderContainer>
 	)

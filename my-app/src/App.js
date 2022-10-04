@@ -20,5 +20,3 @@ function App() {
 }
 
 export default App
-
-//https://codesandbox.io/s/ytzx1?file=/src/components/HashLinkPage.tsx

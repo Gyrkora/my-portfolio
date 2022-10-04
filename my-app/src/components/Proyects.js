@@ -1,32 +1,14 @@
-import { ProyectContainer, ProyectsContainer } from '../styles/Proyects.styles'
+import { CenteredContainer } from '../styles/UI/Containers.styles'
 import { SectionContainer } from '../styles/UI/SectionContainer.styles'
+import ProyectItem from './ProyectItem'
 
 const Proyects = () => {
 	return (
 		<SectionContainer>
 			<h3>My Proyects </h3>
-			<ProyectsContainer>
-				<ProyectContainer>
-					<p>proyect</p>
-				</ProyectContainer>
-				<ProyectContainer>
-					<p>proyect</p>
-				</ProyectContainer>
-				<ProyectContainer>
-					<p>proyect</p>
-				</ProyectContainer>
-			</ProyectsContainer>
-			<ProyectsContainer>
-				<ProyectContainer>
-					<p>proyect</p>
-				</ProyectContainer>
-				<ProyectContainer>
-					<p>proyect</p>
-				</ProyectContainer>
-				<ProyectContainer>
-					<p>proyect</p>
-				</ProyectContainer>
-			</ProyectsContainer>
+			<CenteredContainer>
+				<ProyectItem />
+			</CenteredContainer>
 		</SectionContainer>
 	)
 }
