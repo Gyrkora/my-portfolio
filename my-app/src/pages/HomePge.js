@@ -1,5 +1,6 @@
 import React from 'react'
 import About from '../components/About'
+import Carousel from '../components/Carousel'
 import Header from '../components/Header'
 import Proyects from '../components/Proyects'
 import Skills from '../components/Skills'
@@ -12,6 +13,7 @@ const HomePge = () => {
 			<About />
 			<Proyects />
 			<Skills />
+			<Carousel />
 		</HomePageContainer>
 	)
 }

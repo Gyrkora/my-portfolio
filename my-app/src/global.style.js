@@ -2,6 +2,11 @@ import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
 
+* {
+
+    scroll-behavior: smooth;
+}
+
 body{
  
     background-color: #1d1d1d;

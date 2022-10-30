@@ -56,3 +56,13 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+/* 
+
+portfolio con link from gatsby
+https://github.com/richidoes/Portfolio/blob/master/src/components/buttons/MenuButton.tsx 
+
+
+
+
+*/

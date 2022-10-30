@@ -11,6 +11,7 @@ export const HeaderContainer = styled.div`
 	h2 {
 		font-size: 70px;
 		color: #4c86a8;
+		/* color: white; */
 		margin: 0;
 	}
 

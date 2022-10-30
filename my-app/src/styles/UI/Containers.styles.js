@@ -11,9 +11,25 @@ export const CenteredContainer = styled.div`
 	}
 `
 
+export const TotalCenteredContainer = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 2.5rem 0;
+`
+
 export const RowContainer = styled.div`
 	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
 	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+`
+
+export const ColumnContainer = styled.div`
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 `

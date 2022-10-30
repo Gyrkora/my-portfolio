@@ -1,14 +1,38 @@
-import { SectionContainer } from '../styles/UI/SectionContainer.styles'
+import { RowContainer } from '../styles/UI/Containers.styles'
+import {
+	SectionContainer,
+	SkillSectionContainer,
+} from '../styles/UI/SectionContainer.styles'
 import SkillItem from './SkillItem'
+// Import Swiper React components
 
 const Skills = () => {
 	return (
-		<SectionContainer>
+		<SkillSectionContainer>
 			<h3>Skills</h3>
 
-			<SkillItem />
-		</SectionContainer>
+			<RowContainer>
+				<SkillItem />
+			</RowContainer>
+		</SkillSectionContainer>
 	)
 }
 
 export default Skills
+
+/* 		
+
+
+
+
+
+
+    
+
+	
+	
+	
+	
+	
+	
+	*/
