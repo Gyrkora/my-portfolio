@@ -5,6 +5,7 @@ const Container = ({
 	width,
 	height,
 	rWidth,
+	rotateY,
 	children,
 }) => {
 	return <div className={className}>{children}</div>

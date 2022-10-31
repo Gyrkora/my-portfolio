@@ -7,7 +7,6 @@ import 'swiper/css/pagination'
 import 'swiper/css/grid'
 import { Pagination, Grid, Autoplay } from 'swiper'
 import { imageList } from '../data'
-import { CardGeneral } from '../styles/UI/Card'
 import { TotalCenteredContainer } from '../styles/UI/Containers.styles'
 import { CarouselContainer } from '../styles/Carousel.styles'
 

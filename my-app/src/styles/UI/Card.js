@@ -8,11 +8,12 @@ export const CardGeneral = styled(Container)`
 	width: ${(props) => props.rWidth};
 	height: ${(props) => props.height};
 
-	max-height: 95%;
+	/* max-height: 95%; */
 	margin: 0 1.5rem;
 	border-radius: 1rem;
 	border-top: ${(props) => props.borderTop};
 	background-color: ${(props) => props.bColor};
+	/* transition: all 0.5s ease-in-out; */
 
 	p {
 		color: white;

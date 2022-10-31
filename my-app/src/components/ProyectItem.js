@@ -1,19 +1,19 @@
 import React from 'react'
-import { ProyectContainer, ProyectTexts } from '../styles/ProyectItem.styles'
+import {
+	ProyectBack,
+	ProyectCard,
+	ProyectContainer,
+	ProyectFront,
+	ProyectTexts,
+} from '../styles/ProyectItem.styles'
 import { CardGeneral } from '../styles/UI/Card'
 import { RowContainer } from '../styles/UI/Containers.styles'
 
 const ProyectItem = ({ type }) => {
 	return (
-		<CardGeneral
-			bColor={'#1d1d1d'}
-			borderTop={'2px solid #ebc331'}
-			width={'20rem'}
-			height={'25rem'}
-			rWidth={'15rem'}
-		>
+		<ProyectCard rotateY={'180deg'}>
 			<ProyectContainer>
-				<ProyectTexts>
+				<ProyectFront>
 					<h3>Javascript</h3>
 					<h2>Desafíos TOW</h2>
 					<p>
@@ -21,14 +21,20 @@ const ProyectItem = ({ type }) => {
 						cillum eiusmod duis cupidatat excepteur commodo ad voluptate do.
 						Nisi
 					</p>
-				</ProyectTexts>
+				</ProyectFront>
 
-				<RowContainer>
+				<ProyectBack>
+					{/* <ProyectCard> */}
+					<h2>hola</h2>
+					{/* </ProyectCard> */}
+				</ProyectBack>
+
+				{/* <RowContainer>
 					<p>hola1</p>
 					<p>hola2</p>
-				</RowContainer>
+				</RowContainer> */}
 			</ProyectContainer>
-		</CardGeneral>
+		</ProyectCard>
 	)
 }
 
