@@ -1,10 +1,10 @@
-import React from 'react'
-import { AboutText, AboutTextContainer } from '../styles/About.styles'
-import { SectionContainer } from '../styles/UI/SectionContainer.styles'
+import React from 'react';
+import { AboutText, AboutTextContainer } from '../styles/About.styles';
+import { SectionContainer } from '../styles/UI/SectionContainer.styles';
 
 const About = () => {
 	return (
-		<SectionContainer>
+		<SectionContainer id="about">
 			<h3>Who am I?</h3>
 
 			<AboutTextContainer>
@@ -17,7 +17,7 @@ const About = () => {
 				</AboutText>
 			</AboutTextContainer>
 		</SectionContainer>
-	)
-}
+	);
+};
 
-export default About
+export default About;

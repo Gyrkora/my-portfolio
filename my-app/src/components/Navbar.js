@@ -9,12 +9,11 @@ import {
 	OpenLinksButton,
 	NavbarRLink,
 	Logo,
-} from '../styles/Navbar.style'
-import { useState } from 'react'
-// import { Link } from 'react-router-dom'
+} from '../styles/Navbar.style';
+import { useState } from 'react';
 
 const Navbar = () => {
-	const [showNavbar, setShowNavbar] = useState(false)
+	const [showNavbar, setShowNavbar] = useState(false);
 
 	return (
 		<div>
@@ -28,13 +27,55 @@ const Navbar = () => {
 						</NavbarLinkContainer>
 					</LeftContainer>
 					<RightContainer>
-						<NavbarLink to="/">About</NavbarLink>
-						<NavbarLink to="/">Proyects</NavbarLink>
-						<NavbarLink to="/">Blog</NavbarLink>
-						<NavbarLink to="/">Contact</NavbarLink>
+						<NavbarLink
+							to="about"
+							spy={true}
+							smooth={true}
+							offset={-100}
+							duration={500}
+						>
+							About
+						</NavbarLink>
+
+						<NavbarLink
+							to="proyects"
+							spy={true}
+							smooth={true}
+							offset={-100}
+							duration={400}
+						>
+							Proyects
+						</NavbarLink>
+						<NavbarLink
+							to="skills"
+							spy={true}
+							smooth={true}
+							offset={50}
+							duration={500}
+						>
+							Skills
+						</NavbarLink>
+						<NavbarLink
+							to="blog"
+							spy={true}
+							smooth={true}
+							offset={50}
+							duration={500}
+						>
+							Blog
+						</NavbarLink>
+						<NavbarLink
+							to="contact"
+							spy={true}
+							smooth={true}
+							offset={50}
+							duration={500}
+						>
+							Contact
+						</NavbarLink>
 						<OpenLinksButton
 							onClick={() => {
-								setShowNavbar((current) => !current)
+								setShowNavbar((current) => !current);
 							}}
 						>
 							{showNavbar ? <>&#10005;</> : <>&#8801;</>}
@@ -52,10 +93,10 @@ const Navbar = () => {
 				)}
 			</NavbarContainer>
 		</div>
-	)
-}
+	);
+};
 
-export default Navbar
+export default Navbar;
 
 /* 
 

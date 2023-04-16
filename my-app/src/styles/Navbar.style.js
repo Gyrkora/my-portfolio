@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { Link, NavLink } from 'react-router-dom'
+import styled from 'styled-components';
+import { Link as LinkScroll } from 'react-scroll';
 
 export const NavbarContainer = styled.nav`
 	width: 100%;
@@ -12,14 +12,14 @@ export const NavbarContainer = styled.nav`
 	@media (min-width: 700px) {
 		height: 80px;
 	}
-`
+`;
 
 export const LeftContainer = styled.div`
 	flex: 40%;
 	display: flex;
 	align-items: center;
 	padding-left: 5%;
-`
+`;
 export const RightContainer = styled.div`
 	flex: 60%;
 	display: flex;
@@ -34,19 +34,19 @@ export const RightContainer = styled.div`
 	@media (min-width: 1024px) {
 		justify-content: space-evenly;
 	}
-`
+`;
 
 export const NavbarInnerContainer = styled.div`
 	width: 100%;
 	height: 80px;
 	display: flex;
-`
+`;
 
 export const NavbarLinkContainer = styled.div`
 	display: flex;
-`
+`;
 
-export const NavbarLink = styled(NavLink)`
+export const NavbarLink = styled(LinkScroll)`
 	color: white;
 	font-size: x-large;
 	font-family: Arial, Helvetica, sans-serif;
@@ -56,15 +56,15 @@ export const NavbarLink = styled(NavLink)`
 	@media (max-width: 700px) {
 		display: none;
 	}
-`
+`;
 
-export const NavbarRLink = styled(Link)`
+export const NavbarRLink = styled(LinkScroll)`
 	color: white;
 	font-size: x-large;
 	font-family: Arial, Helvetica, sans-serif;
 	text-decoration: none;
 	margin: 10px;
-`
+`;
 
 export const Logo = styled.div`
 	display: flex;
@@ -74,7 +74,7 @@ export const Logo = styled.div`
 	font-size: 2.5rem;
 	font-weight: bold;
 	color: white;
-`
+`;
 
 export const OpenLinksButton = styled.button`
 	width: 70px;
@@ -88,7 +88,7 @@ export const OpenLinksButton = styled.button`
 	@media (min-width: 700px) {
 		display: none;
 	}
-`
+`;
 
 export const NavbarExtendedContainer = styled.div`
 	display: flex;
@@ -98,4 +98,4 @@ export const NavbarExtendedContainer = styled.div`
 	@media (min-width: 700px) {
 		display: none;
 	}
-`
+`;

@@ -97,5 +97,51 @@ const imageList = [
 		alt: 'git',
 	},
 ]
+const proyectList = [
+	{
+		id: 1,
+		language: 'Css-Sass',
+		name: 'Vivero Boreal',
+		alt: 'Css-Html',
+		description: 'An e-commerce online shop to buy plant related products',
+		tools: 'HTML, Node-Sass, Javascript, Gulp, Git, Bootstrap, Nodemon',
+	},
+	{
+		id: 2,
+		language: 'Javascript',
+		name: 'Desafíos TOW',
+		alt: 'Js',
+		description: 'Trivia to help practice Spanish as a second language',
+		tools:
+			'HTML, TailwindCss, Javascript, Git , Nodejs - LocalStorage, SpeechRecognition Google Chrome API and Merrian-Webster’s API',
+	},
+	{
+		id: 3,
+		language: 'React js',
+		name: 'Tienda Online',
+		alt: 'Reactjs',
+		description: 'An e-commerce online shop to buy online courses',
+		tools:
+			'Git, Styled-components, Firebase/Firestore, Formik, React dependencies (react-dom, react-router-dom, etc.) and Reactt Hooks (useState, useEffect, useParams, useContext, etc…) ',
+	},
+	{
+		id: 4,
+		language: 'Wordpress',
+		name: 'The Other Way Spanish',
+		alt: 'Wordpress',
+		description: 'The Other Way Spanish official website',
+		tools:
+			'Podcast platform (spotify, Apple Podcasts, Google Podcasts, etc.), H5P API exercises, SSL protection, cookies consent, connected to Google Analytics and Google Search Console and optimized SEO.',
+	},
+	{
+		id: 5,
+		language: 'React Native',
+		name: 'MultiBrain',
+		alt: 'React-Native',
+		description: 'a multitask mobile application',
+		tools:
+			'expo, react-dom, react-native-screens, react-redux, expo-locations, Geocoding API, Maps Static API, expo-sqlite, etc.',
+	},
+]
 
-export { imageList }
+export { imageList, proyectList }

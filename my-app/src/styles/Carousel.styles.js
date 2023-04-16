@@ -1,12 +1,18 @@
 import styled from 'styled-components'
 
-export const CarouselContainer = styled.div`
+export const CarouselSkillContainer = styled.div`
 	img {
-		width: 35vmin;
-		height: 35vmin;
+		width: 40vmin;
+		height: 60vmin;
 	}
 
 	@media (min-width: 480px) {
 		display: none;
+	}
+`
+export const CarouselProyectContainer = styled.div`
+	img {
+		width: 50vmin;
+		height: 50vmin;
 	}
 `
