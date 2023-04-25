@@ -15,3 +15,8 @@ Fuentes carousel
 https://swiperjs.com/demos
 https://swiperjs.com/swiper-api#custom-build
 https://codesandbox.io/s/swiper-slides-per-view-react-forked-vyl4f3?file=/src/App.jsx
+
+vercel production
+https://vercel.com/docs/concepts/deployments/environments#production
+
+Link to deployment: https://vercel.com/gyrkora/my-app
