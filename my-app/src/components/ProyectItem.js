@@ -1,63 +1,72 @@
-import React from 'react'
-import { proyectList } from '../data'
-import { CarouselProyectContainer } from '../styles/Carousel.styles'
+import React from 'react';
+import { proyectList } from '../data';
 import {
 	ProyectBack,
-	ProyectCard,
 	ProyectContainer,
 	ProyectFront,
-	ProyectTexts,
-} from '../styles/ProyectItem.styles'
-import { CardGeneral } from '../styles/UI/Card'
-import {
-	RowContainer,
-	TotalCenteredContainer,
-} from '../styles/UI/Containers.styles'
+} from '../styles/ProyectItem.styles';
 
 //swiper
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
-import 'swiper/css'
-import 'swiper/css/pagination'
+import 'swiper/css';
+import 'swiper/css/pagination';
 
-import { Pagination } from 'swiper'
+import { Pagination } from 'swiper';
 
 const ProyectItem = ({ type }) => {
 	return (
-		<CarouselProyectContainer>
+		<div>
 			<Swiper
-				slidesPerView={1}
-				spaceBetween={1}
+				slidesPerView={2}
+				spaceBetween={30}
 				pagination={{
 					clickable: true,
 				}}
 				modules={[Pagination]}
 				className="mySwiper"
+				breakpoints={{
+					// when window width is >= 200px
+					200: {
+						width: 230,
+						slidesPerView: 1,
+					},
+					396: {
+						width: 400,
+						slidesPerView: 1,
+					},
+					690: {
+						width: 400,
+						slidesPerView: 1,
+					},
+					864: {
+						width: 850,
+						slidesPerView: 2,
+					},
+				}}
 			>
 				{proyectList.map((proj, index) => (
 					<SwiperSlide key={index}>
-						<ProyectCard rotateY={'180deg'}>
-							<ProyectContainer>
-								<ProyectFront>
-									<h3>{proj.language}</h3>
-									<h2>{proj.name}</h2>
-									<p>{proj.description}</p>
-								</ProyectFront>
+						<ProyectContainer>
+							<ProyectFront>
+								<h3>{proj.language}</h3>
+								<h2>{proj.name}</h2>
+								<img src={proj.photo} alt="Logo"></img>
+							</ProyectFront>
 
-								<ProyectBack>
-									<h2>hola</h2>
-								</ProyectBack>
-							</ProyectContainer>
-						</ProyectCard>
+							<ProyectBack>
+								<h2>hola</h2>
+							</ProyectBack>
+						</ProyectContainer>
 					</SwiperSlide>
 				))}
 			</Swiper>
-		</CarouselProyectContainer>
-	)
-}
+		</div>
+	);
+};
 
-export default ProyectItem
+export default ProyectItem;
 
 /* 
 <RowContainer>

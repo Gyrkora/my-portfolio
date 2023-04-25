@@ -52,6 +52,7 @@ export const NavbarLink = styled(LinkScroll)`
 	font-family: Arial, Helvetica, sans-serif;
 	text-decoration: none;
 	margin: 10px;
+	cursor: pointer;
 
 	@media (max-width: 700px) {
 		display: none;

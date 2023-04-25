@@ -1,9 +1,9 @@
-import htmlImage from './assets/html.svg'
-import cssImage from './assets/css.svg'
-import jsImage from './assets/js.svg'
-import reactImage from './assets/react.svg'
-import nodeImage from './assets/node.svg'
-import gitImage from './assets/git.svg'
+import htmlImage from './assets/html.svg';
+import cssImage from './assets/css.svg';
+import jsImage from './assets/js.svg';
+import reactImage from './assets/react.svg';
+import nodeImage from './assets/node.svg';
+import gitImage from './assets/git.svg';
 
 const imageList = [
 	{
@@ -96,14 +96,15 @@ const imageList = [
 		image: gitImage,
 		alt: 'git',
 	},
-]
+];
 const proyectList = [
 	{
 		id: 1,
 		language: 'Css-Sass',
 		name: 'Vivero Boreal',
 		alt: 'Css-Html',
-		description: 'An e-commerce online shop to buy plant related products',
+		photo:
+			'https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg',
 		tools: 'HTML, Node-Sass, Javascript, Gulp, Git, Bootstrap, Nodemon',
 	},
 	{
@@ -111,7 +112,8 @@ const proyectList = [
 		language: 'Javascript',
 		name: 'Desafíos TOW',
 		alt: 'Js',
-		description: 'Trivia to help practice Spanish as a second language',
+		photo:
+			'https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg',
 		tools:
 			'HTML, TailwindCss, Javascript, Git , Nodejs - LocalStorage, SpeechRecognition Google Chrome API and Merrian-Webster’s API',
 	},
@@ -120,7 +122,8 @@ const proyectList = [
 		language: 'React js',
 		name: 'Tienda Online',
 		alt: 'Reactjs',
-		description: 'An e-commerce online shop to buy online courses',
+		photo:
+			'https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg',
 		tools:
 			'Git, Styled-components, Firebase/Firestore, Formik, React dependencies (react-dom, react-router-dom, etc.) and Reactt Hooks (useState, useEffect, useParams, useContext, etc…) ',
 	},
@@ -129,7 +132,8 @@ const proyectList = [
 		language: 'Wordpress',
 		name: 'The Other Way Spanish',
 		alt: 'Wordpress',
-		description: 'The Other Way Spanish official website',
+		photo:
+			'https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg',
 		tools:
 			'Podcast platform (spotify, Apple Podcasts, Google Podcasts, etc.), H5P API exercises, SSL protection, cookies consent, connected to Google Analytics and Google Search Console and optimized SEO.',
 	},
@@ -138,10 +142,11 @@ const proyectList = [
 		language: 'React Native',
 		name: 'MultiBrain',
 		alt: 'React-Native',
-		description: 'a multitask mobile application',
+		photo:
+			'https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg',
 		tools:
 			'expo, react-dom, react-native-screens, react-redux, expo-locations, Geocoding API, Maps Static API, expo-sqlite, etc.',
 	},
-]
+];
 
-export { imageList, proyectList }
+export { imageList, proyectList };

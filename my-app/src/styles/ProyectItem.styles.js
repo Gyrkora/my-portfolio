@@ -1,36 +1,4 @@
-import styled from 'styled-components'
-import Container from '../components/UI/Container'
-
-export const ProyectCard = styled(Container)`
-	display: flex;
-	justify-content: center;
-
-	box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.73);
-	-webkit-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.73);
-	-moz-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.73);
-	width: 15rem;
-	height: 25rem;
-
-	max-width: 99%;
-	margin: 0 1.5rem;
-	border-radius: 1rem;
-	border-top: 2px solid #ebc331;
-	background-color: #1d1d1d;
-	transition: 0.5s;
-
-	p {
-		color: white;
-	}
-
-	&:hover {
-		transform: rotateY(${(props) => props.rotateY});
-	}
-
-	@media (min-width: 768px) {
-		width: 20rem;
-		height: 25rem;
-	}
-`
+import styled from 'styled-components';
 
 export const ProyectContainer = styled.div`
 	position: relative;
@@ -38,9 +6,18 @@ export const ProyectContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 	max-width: 95%;
-	width: 20rem;
+	/* max-width: 40rem; */
 	max-height: 95%;
-	height: 25rem;
+	height: 33rem;
+
+	box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.73);
+	-webkit-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.73);
+	-moz-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.73);
+	margin: 0.5rem 1.5rem;
+	border-radius: 1rem;
+	border-top: 2px solid #ebc331;
+	background-color: #1d1d1d;
+
 	/* flex-direction: column; */
 
 	transition: transform 0.5s;
@@ -49,7 +26,7 @@ export const ProyectContainer = styled.div`
 	&:hover {
 		transform: rotateY(180deg);
 	}
-`
+`;
 
 export const ProyectFront = styled.div`
 	display: flex;
@@ -58,25 +35,41 @@ export const ProyectFront = styled.div`
 	flex-direction: column;
 	text-align: center;
 	padding: 2rem;
-	/* max-width: 95%; */
-
 	position: absolute;
 	width: 95%;
 	height: 100%;
-
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+	position: relative;
 
 	h2 {
 		font-size: 45px;
-		margin: 1rem 0;
+		/* margin: 60px, 0, 100px, 0; */
+		margin-bottom: 70px;
+		/* margin-top: 30px; */
+		color: white;
+	}
+
+	img {
+		height: 190px;
+		width: 180px;
 	}
 
 	h3 {
 		font-size: 30px;
 		margin: 0;
+		position: absolute;
+		left: 40px;
+		top: 60px;
 	}
-`
+
+	p {
+		color: #4c86a8;
+	}
+`;
+
+/* proyect front inside */
+
 export const ProyectBack = styled.div`
 	position: absolute;
 	width: 95%;
@@ -84,11 +77,26 @@ export const ProyectBack = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding: 2rem;
 
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 
-	background-color: #2980b9;
 	color: white;
 	transform: rotateY(180deg);
-`
+
+	h2 {
+		font-size: 45px;
+		margin: 1rem 0;
+		color: white;
+	}
+
+	h3 {
+		font-size: 30px;
+		margin: 0;
+	}
+
+	p {
+		color: #4c86a8;
+	}
+`;

@@ -5,6 +5,8 @@ import Header from '../components/Header';
 import Proyects from '../components/Proyects';
 import Skills from '../components/Skills';
 import { HomePageContainer } from '../styles/HomePage.styles';
+import CarouselProyect from '../components/CarouselProyect';
+import Contact from '../components/Contact';
 
 const HomePge = () => {
 	return (
@@ -16,6 +18,7 @@ const HomePge = () => {
 			<Skills />
 
 			<CarouselSkill />
+			<Contact />
 		</HomePageContainer>
 	);
 };
