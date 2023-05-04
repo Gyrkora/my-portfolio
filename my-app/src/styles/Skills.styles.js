@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import Container from '../components/UI/Container'
+import styled from 'styled-components';
+import Container from '../components/UI/Container';
 
 export const SkillContainer = styled.div`
 	background-color: #1d1d1d;
@@ -13,7 +13,7 @@ export const SkillContainer = styled.div`
 	margin: 0 1.5rem;
 	border-radius: 1rem;
 	background-color: black;
-`
+`;
 
 export const SkillCard = styled(Container)`
 	box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.73);
@@ -49,4 +49,4 @@ export const SkillCard = styled(Container)`
 	@media (max-width: 488px) {
 		display: none;
 	}
-`
+`;

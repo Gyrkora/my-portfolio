@@ -44,9 +44,7 @@ export const ProyectFront = styled.div`
 
 	h2 {
 		font-size: 45px;
-		/* margin: 60px, 0, 100px, 0; */
 		margin-bottom: 70px;
-		/* margin-top: 30px; */
 		color: white;
 	}
 

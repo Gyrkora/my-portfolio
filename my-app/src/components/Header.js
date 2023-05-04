@@ -1,12 +1,12 @@
-import React from 'react'
-import { HeaderContainer } from '../styles/Header.styles'
-import { ButtonOriginal } from '../styles/UI/ButtonGeneral'
+import React from 'react';
+import { HeaderContainer } from '../styles/Header.styles';
+import { ButtonOriginal } from '../styles/UI/ButtonGeneral';
 
 const Header = () => {
 	return (
 		<HeaderContainer>
 			<h2>Hello!</h2>
-			<h2>I'm Gy,</h2>
+			<h2>I'm Gyr,</h2>
 			<h2>A Web Developer</h2>
 
 			<ButtonOriginal
@@ -15,7 +15,7 @@ const Header = () => {
 				label={'Contact me'}
 			></ButtonOriginal>
 		</HeaderContainer>
-	)
-}
+	);
+};
 
-export default Header
+export default Header;
