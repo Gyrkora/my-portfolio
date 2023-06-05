@@ -1,28 +1,94 @@
 import React from 'react';
 import { SectionContainer } from '../styles/UI/SectionContainer.styles';
+import {
+	FormContainer,
+	FormInnerContainer,
+	FullWidthTextArea,
+	InputField,
+	InputGroup,
+	SubmitButton,
+	TextAreaContainer,
+	TextAreaField,
+	ErrorMessageText,
+} from '../styles/Contact.styles';
+
+import { ErrorMessage, Field, Formik } from 'formik';
+import * as Yup from 'yup';
+
+const validationSchema = Yup.object().shape({
+	name: Yup.string().required('Name is required'),
+	email: Yup.string().email('Invalid email').required('Email is required'),
+	message: Yup.string().required('Message is required'),
+});
 
 const Contact = () => {
+	const initialValues = {
+		name: '',
+		email: '',
+		subject: '',
+		message: '',
+	};
+
+	const handleSubmit = (values) => {
+		console.log(values);
+	};
+
 	return (
-		<SectionContainer id="Contact">
+		<SectionContainer id="contact">
 			<h3>Contact me</h3>
 
-			{/* <div class="form-container">
-  <form>
-<label for="name">Name:</label>
-    <input type="text" id="name" name="name">
+			<FormContainer>
+				<Formik
+					initialValues={initialValues}
+					validationSchema={validationSchema}
+					onSubmit={handleSubmit}
+				>
+					{({ errors, touched }) => (
+						<FormInnerContainer>
+							<InputGroup>
+								<InputField
+									type="text"
+									id="name"
+									name="name"
+									placeholder="Name"
+									required
+								/>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
+								<InputField
+									type="email"
+									id="email"
+									name="email"
+									placeholder="Email"
+									required
+								/>
+							</InputGroup>
 
-    <label for="title">Title:</label>
-    <input type="text" id="title" name="title">
+							<InputGroup>
+								<InputField
+									type="text"
+									id="subject"
+									name="subject"
+									placeholder="Subject"
+									required
+								/>
+							</InputGroup>
 
-    <label for="message">Message:</label>
-    <textarea id="message" name="message"></textarea>
+							<TextAreaContainer>
+								<TextAreaField
+									as={FullWidthTextArea}
+									id="message"
+									name="message"
+									rows="5"
+									placeholder="Message"
+									required
+								/>
+							</TextAreaContainer>
 
-    <button type="submit">Submit</button>
-  </form>
-</div> */}
+							<SubmitButton type="submit">Send Message</SubmitButton>
+						</FormInnerContainer>
+					)}
+				</Formik>
+			</FormContainer>
 		</SectionContainer>
 	);
 };

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const SectionContainer = styled.div`
 	margin-bottom: 200px;
@@ -12,7 +12,7 @@ export const SectionContainer = styled.div`
 			text-align: left;
 		}
 	}
-`
+`;
 
 export const SkillSectionContainer = styled.div`
 	margin-bottom: 200px;
@@ -30,4 +30,4 @@ export const SkillSectionContainer = styled.div`
 	@media (max-width: 488px) {
 		margin-bottom: 0;
 	}
-`
+`;

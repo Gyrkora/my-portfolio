@@ -25,9 +25,9 @@ export const RowContainer = styled.div`
 	flex-direction: row;
 	/* justify-content: flex-start; */
 	justify-content: center;
-	align-content: flex-start;
+	align-content: center;
 
-	margin: 0 auto;
+	/* margin: 0 auto; */
 `;
 
 export const ColumnContainer = styled.div`

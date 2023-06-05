@@ -1,7 +1,7 @@
-import React from 'react'
-import { imageList } from '../data'
-import { SkillCard } from '../styles/Skills.styles'
-import { TotalCenteredContainer } from '../styles/UI/Containers.styles'
+import React from 'react';
+import { imageList } from '../data';
+import { SkillCard } from '../styles/Skills.styles';
+import { TotalCenteredContainer } from '../styles/UI/Containers.styles';
 
 const SkillItem = () => {
 	return (
@@ -14,7 +14,7 @@ const SkillItem = () => {
 				</SkillCard>
 			))}
 		</>
-	)
-}
+	);
+};
 
-export default SkillItem
+export default SkillItem;
