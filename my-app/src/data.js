@@ -100,9 +100,9 @@ const imageList = [
 const proyectList = [
 	{
 		id: 1,
-		language: 'Css-Sass',
-		name: 'Vivero Boreal',
-		alt: 'Css-Html',
+		language: 'Wordpress',
+		name: 'TOW Spanish',
+		alt: 'wordpress',
 		photo:
 			'https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg',
 		tools: 'HTML, Node-Sass, Javascript, Gulp, Git, Bootstrap, Nodemon',
@@ -113,7 +113,7 @@ const proyectList = [
 		name: 'Desafíos TOW',
 		alt: 'Js',
 		photo:
-			'https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg',
+			'https://blog.depositphotos.com/wp-content/uploads/2020/09/Vide-Infra.png.webp',
 		tools:
 			'HTML, TailwindCss, Javascript, Git , Nodejs - LocalStorage, SpeechRecognition Google Chrome API and Merrian-Webster’s API',
 	},
@@ -121,31 +121,11 @@ const proyectList = [
 		id: 3,
 		language: 'React js',
 		name: 'Tienda Online',
-		alt: 'Reactjs',
+		alt: 'React js',
 		photo:
-			'https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg',
+			'https://c8.alamy.com/comp/2B098YD/quiz-test-survey-exam-vector-concept-quiz-online-on-laptop-vector-exam-for-education-illustration-of-quiz-test-2B098YD.jpg',
 		tools:
 			'Git, Styled-components, Firebase/Firestore, Formik, React dependencies (react-dom, react-router-dom, etc.) and Reactt Hooks (useState, useEffect, useParams, useContext, etc…) ',
-	},
-	{
-		id: 4,
-		language: 'Wordpress',
-		name: 'The Other Way Spanish',
-		alt: 'Wordpress',
-		photo:
-			'https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg',
-		tools:
-			'Podcast platform (spotify, Apple Podcasts, Google Podcasts, etc.), H5P API exercises, SSL protection, cookies consent, connected to Google Analytics and Google Search Console and optimized SEO.',
-	},
-	{
-		id: 5,
-		language: 'React Native',
-		name: 'MultiBrain',
-		alt: 'React-Native',
-		photo:
-			'https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg',
-		tools:
-			'expo, react-dom, react-native-screens, react-redux, expo-locations, Geocoding API, Maps Static API, expo-sqlite, etc.',
 	},
 ];
 

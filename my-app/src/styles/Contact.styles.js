@@ -81,6 +81,7 @@ export const SubmitButton = styled.button`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	border-radius: 1rem;
 
 	@media (min-width: 750px) {
 		position: absolute;

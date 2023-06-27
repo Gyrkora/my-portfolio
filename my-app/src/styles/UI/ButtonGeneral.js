@@ -1,5 +1,6 @@
-import styled from 'styled-components'
-import { Button } from '../../components/UI/Button'
+import styled from 'styled-components';
+import { Button } from '../../components/UI/Button';
+import { Link as LinkScroll } from 'react-scroll';
 
 export const ButtonOriginal = styled(Button)`
 	margin: 3rem 0 1rem 0;
@@ -7,23 +8,61 @@ export const ButtonOriginal = styled(Button)`
 	color: #a93f55;
 	border-color: ${(props) => props.bColor};
 	cursor: pointer;
-	/* border-radius: 1rem; */
+	border-radius: 1rem;
 	border-width: 4px;
 	border-style: solid;
 	font-size: 1.5rem;
-	transition: all 0.5s ease-in-out;
+
 	background-color: #1d1d1d;
 
-	&:hover {
-		padding: 0.5rem ${(props) => props.pX};
-	}
-`
+	@media (min-width: 768px) {
+		transition: all 0.5s ease-in-out;
 
-// export const ButtonSwitchedContain = styled.div`
-// 	display: flex;
-// 	flex-direction: column;
-// 	align-items: center;
-// 	justify-content: center;
-// 	column-gap: 3rem;
-// 	margin-top: 2rem;
-// `
+		&:hover {
+			padding: 0.5rem ${(props) => props.pX};
+		}
+	}
+`;
+
+export const ButtonLinkHeader = styled(LinkScroll)``;
+
+export const ButtonCardsContainer = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 80px;
+	max-width: 80%;
+	flex-direction: column;
+
+	@media (min-width: 600px) {
+		flex-direction: row;
+	}
+`;
+
+export const ButtonBackCards = styled(ButtonOriginal)`
+	padding: 12px 40px;
+	margin: 10px;
+	font-size: 15px;
+
+	@media (min-width: 768px) {
+		transition: all 0.5s ease-in-out;
+		margin: 50px 10px 0 10px;
+
+		&:hover {
+			padding: 12px 40px;
+		}
+	}
+`;
+export const ButtonFrontCards = styled(ButtonBackCards)`
+	padding: 12px 30px;
+	font-size: 15px;
+	margin: 15px 10px 0 10px;
+
+	/* @media (max-width: 766px) and (min-width: 600px) {
+		flex-wrap: nowrap;
+	} */
+
+	@media (min-width: 1024px) {
+		display: none;
+	}
+`;

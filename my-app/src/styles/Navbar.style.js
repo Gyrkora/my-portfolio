@@ -54,6 +54,12 @@ export const NavbarLink = styled(LinkScroll)`
 	margin: 10px;
 	cursor: pointer;
 
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		color: #4c86a8;
+	}
+
 	@media (max-width: 700px) {
 		display: none;
 	}
