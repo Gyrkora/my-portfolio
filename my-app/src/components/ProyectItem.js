@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { proyectList } from '../data';
+// import { proyectList } from '../data';
 import {
 	ProyectBack,
 	ProyectContainer,
@@ -31,7 +31,9 @@ const ProyectItem = ({ type }) => {
 	}, []);
 	function getQuote() {
 		axios
-			.get('http://localhost:3001/api', { crossdomain: true })
+			.get('https://back-portfolio-4nf8.onrender.com/api', {
+				crossdomain: true,
+			})
 			.then((response) => {
 				setProjects(response.data);
 			})
