@@ -4,7 +4,7 @@ import ProyectItem from './ProyectItem';
 const Proyects = () => {
 	return (
 		<SectionContainer>
-			<h3 id="proyects">My Proyects </h3>
+			<h3 id="proyects">My Proyects</h3>
 			<ProyectItem />
 		</SectionContainer>
 	);

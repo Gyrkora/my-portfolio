@@ -106,12 +106,17 @@ export const ProyectBack = styled(ProyectFront)`
 
 export const ProyectBackDescription = styled.div`
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	text-align: left;
+	text-align: center;
 
 	margin: 0 50px;
+	/* 
+	@media (min-width: 1024px) {
+		flex-direction: row;
+		text-align: left;
+	} */
 `;
 
 export const ProyectDescriptionTitle = styled.div`

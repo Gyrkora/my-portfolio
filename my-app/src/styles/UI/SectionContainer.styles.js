@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const SectionContainer = styled.div`
 	margin-bottom: 200px;
+
 	h3 {
 		text-align: center;
 		font-size: 55px;
@@ -11,6 +12,11 @@ export const SectionContainer = styled.div`
 		@media (min-width: 768px) {
 			text-align: left;
 		}
+	}
+
+	h5 {
+		color: white;
+		font-size: 40px;
 	}
 `;
 

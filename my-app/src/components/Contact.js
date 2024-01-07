@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { SectionContainer } from '../styles/UI/SectionContainer.styles';
 import {
 	FormContainer,
@@ -11,7 +11,7 @@ import {
 	TextAreaField,
 	ErrorMessageText,
 } from '../styles/Contact.styles';
-
+import axios from 'axios';
 import { ErrorMessage, Field, Formik } from 'formik';
 import * as Yup from 'yup';
 
@@ -22,6 +22,28 @@ const validationSchema = Yup.object().shape({
 });
 
 const Contact = () => {
+	// const [projects, setProjects] = useState([]);
+	// useEffect(() => {
+	// 	fetch('http://localhost:3001/api')
+	// 		.then((res) => res.json())
+	// 		.then((data) => setProjects(data.projects));
+	// }, []);
+
+	// useEffect(() => {
+	// 	getQuote();
+	// }, []);
+	// function getQuote() {
+	// 	axios
+	// 		.get('http://localhost:3001/api', { crossdomain: true })
+	// 		.then((response) => {
+	// 			setProjects(response.data);
+	// 			// console.log(projects._id);
+	// 		})
+	// 		.catch((error) => {
+	// 			console.error('Error fetching data:', error);
+	// 		});
+	// }
+
 	const initialValues = {
 		name: '',
 		email: '',
@@ -35,7 +57,7 @@ const Contact = () => {
 
 	return (
 		<SectionContainer id="contact">
-			<h3>Contact me</h3>
+			<h3>Contact me:</h3>
 
 			<FormContainer>
 				<Formik
@@ -89,6 +111,15 @@ const Contact = () => {
 					)}
 				</Formik>
 			</FormContainer>
+
+			{/* <h5>
+				{console.log(projects)}
+				{projects && projects.length > 0 ? (
+					projects.map((data) => <li key={data._id}>{data.name}</li>)
+				) : (
+					<p>No projects to display</p>
+				)}
+			</h5> */}
 		</SectionContainer>
 	);
 };

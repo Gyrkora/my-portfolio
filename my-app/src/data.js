@@ -106,6 +106,8 @@ const proyectList = [
 		photo:
 			'https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg',
 		tools: 'HTML, Node-Sass, Javascript, Gulp, Git, Bootstrap, Nodemon',
+		code: 'https://github.com/Gyrkora/desafios-tow',
+		demo: 'https://gyrkora.github.io/desafios-tow/',
 	},
 	{
 		id: 2,
@@ -116,6 +118,8 @@ const proyectList = [
 			'https://blog.depositphotos.com/wp-content/uploads/2020/09/Vide-Infra.png.webp',
 		tools:
 			'HTML, TailwindCss, Javascript, Git , Nodejs - LocalStorage, SpeechRecognition Google Chrome API and Merrian-Webster’s API',
+		code: 'https://github.com/Gyrkora/desafios-tow',
+		demo: 'https://gyrkora.github.io/desafios-tow/',
 	},
 	{
 		id: 3,
@@ -125,7 +129,9 @@ const proyectList = [
 		photo:
 			'https://c8.alamy.com/comp/2B098YD/quiz-test-survey-exam-vector-concept-quiz-online-on-laptop-vector-exam-for-education-illustration-of-quiz-test-2B098YD.jpg',
 		tools:
-			'Git, Styled-components, Firebase/Firestore, Formik, React dependencies (react-dom, react-router-dom, etc.) and Reactt Hooks (useState, useEffect, useParams, useContext, etc…) ',
+			'Git, Styled-components, Firebase/Firestore, Formik, React dependencies (react-dom, react-router-dom, etc.) and Reactt Hooks. ',
+		code: 'https://github.com/Gyrkora/desafios-tow',
+		demo: 'https://gyrkora.github.io/desafios-tow/',
 	},
 ];
 

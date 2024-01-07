@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { proyectList } from '../data';
 import {
 	ProyectBack,
@@ -13,13 +13,37 @@ import {
 	ButtonBackCards,
 	ButtonCardsContainer,
 	ButtonFrontCards,
-	ButtonProyectCards,
 } from '../styles/UI/ButtonGeneral';
+import { redirectToExternalWebsite } from '../helpers/functions';
+import axios from 'axios';
 
 const ProyectItem = ({ type }) => {
+	const [proyectList, setProjects] = useState([]);
+
+	// useEffect(() => {
+	// 	fetch('http://localhost:3001/api')
+	// 		.then((res) => res.json())
+	// 		.then((data) => setProjects(data.projects));
+	// }, []);
+
+	useEffect(() => {
+		getQuote();
+	}, []);
+	function getQuote() {
+		axios
+			.get('http://localhost:3001/api', { crossdomain: true })
+			.then((response) => {
+				setProjects(response.data);
+			})
+			.catch((error) => {
+				console.error('Error fetching data:', error);
+			});
+	}
+
 	return (
 		<div>
 			<ParentContainerProyects>
+				{/* {console.log(proyectListData)} */}
 				{proyectList.map((proj, index) => (
 					<ProyectContainer key={index}>
 						<ProyectFront>
@@ -31,11 +55,13 @@ const ProyectItem = ({ type }) => {
 									bColor={'#A93F55'}
 									pX={'20rem'}
 									label={'DEMO'}
+									onClick={() => redirectToExternalWebsite(proj.demo)}
 								></ButtonFrontCards>
 								<ButtonFrontCards
 									bColor={'#A93F55'}
 									pX={'20rem'}
 									label={'CODE'}
+									onClick={() => redirectToExternalWebsite(proj.code)}
 								></ButtonFrontCards>
 							</ButtonCardsContainer>
 						</ProyectFront>
@@ -66,11 +92,13 @@ const ProyectItem = ({ type }) => {
 									bColor={'#A93F55'}
 									pX={'20rem'}
 									label={'DEMO'}
+									onClick={() => redirectToExternalWebsite(proj.code)}
 								></ButtonBackCards>
 								<ButtonBackCards
 									bColor={'#A93F55'}
 									pX={'20rem'}
 									label={'CODE'}
+									onClick={() => redirectToExternalWebsite(proj.code)}
 								></ButtonBackCards>
 							</ButtonCardsContainer>
 						</ProyectBack>

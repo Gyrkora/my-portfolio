@@ -3,5 +3,5 @@ export const Button = ({ className, bColor, pX, label, onClick }) => {
 		<button className={className} onClick={onClick}>
 			{label}
 		</button>
-	)
-}
+	);
+};

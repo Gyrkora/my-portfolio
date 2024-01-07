@@ -20,3 +20,5 @@ vercel production
 https://vercel.com/docs/concepts/deployments/environments#production
 
 Link to deployment: https://vercel.com/gyrkora/my-app
+
+command: vercel --prod para push a vercel directo
