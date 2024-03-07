@@ -1,9 +1,26 @@
-import htmlImage from './assets/html.svg';
-import cssImage from './assets/css.svg';
-import jsImage from './assets/js.svg';
-import reactImage from './assets/react.svg';
+import htmlImage from './assets/html2.svg';
+import cssImage from './assets/css2.svg';
+import jsImage from './assets/javascript2.svg';
+import reactImage from './assets/react2.svg';
 import nodeImage from './assets/node.svg';
-import gitImage from './assets/git.svg';
+import gitImage from './assets/git3.svg';
+import sassImage from './assets/sass-1.svg';
+import tailwindImage from './assets/tailwind.svg';
+import githubImage from './assets/github2.svg';
+import jsonImage from './assets/json.svg';
+import bootstrapImage from './assets/bootstrap5.svg';
+import affinityImage from './assets/affinity2.svg';
+import wordpress from './assets/wordpress.svg';
+import phpImage from './assets/php.svg';
+import pythonImage from './assets/python.svg';
+import styledComponentImage from './assets/styled-components.svg';
+import mongoImage from './assets/mongodb.svg';
+import sqliteImage from './assets/sqlite.svg';
+import figmaImage from './assets/figma3.svg';
+import mysql from './assets/mysql.svg';
+import expressImage from './assets/express.svg';
+import djangoImage from './assets/django.svg';
+import firebaseImage from './assets/firebase.svg';
 
 const imageList = [
 	{
@@ -38,63 +55,90 @@ const imageList = [
 	},
 	{
 		id: 7,
-		image: gitImage,
-		alt: 'git',
-	},
-	{
-		id: 8,
-		image: gitImage,
-		alt: 'git',
+		image: sassImage,
+		alt: 'sassImage',
 	},
 	{
 		id: 9,
-		image: gitImage,
-		alt: 'git',
+		image: tailwindImage,
+		alt: 'tailwind',
 	},
 	{
 		id: 10,
-		image: gitImage,
-		alt: 'git',
+		image: githubImage,
+		alt: 'github',
 	},
 	{
 		id: 11,
-		image: gitImage,
-		alt: 'git',
+		image: jsonImage,
+		alt: 'json',
 	},
 	{
 		id: 12,
-		image: gitImage,
-		alt: 'git',
+		image: bootstrapImage,
+		alt: 'bootstrap',
 	},
 	{
 		id: 13,
-		image: gitImage,
-		alt: 'git',
+		image: affinityImage,
+		alt: 'affinity',
 	},
 	{
 		id: 14,
-		image: gitImage,
-		alt: 'git',
+		image: wordpress,
+		alt: 'wordpress',
 	},
 	{
 		id: 15,
-		image: gitImage,
-		alt: 'git',
+		image: phpImage,
+		alt: 'php',
 	},
 	{
 		id: 16,
-		image: gitImage,
-		alt: 'git',
+		image: pythonImage,
+		alt: 'python',
 	},
+
 	{
 		id: 17,
-		image: gitImage,
-		alt: 'git',
+		image: styledComponentImage,
+		alt: 'styled-components',
 	},
 	{
 		id: 18,
-		image: gitImage,
-		alt: 'git',
+		image: mongoImage,
+		alt: 'mongo',
+	},
+	{
+		id: 19,
+		image: sqliteImage,
+		alt: 'sqlite',
+	},
+
+	{
+		id: 20,
+		image: figmaImage,
+		alt: 'figma',
+	},
+	{
+		id: 21,
+		image: mysql,
+		alt: 'mysql',
+	},
+	{
+		id: 22,
+		image: expressImage,
+		alt: 'express',
+	},
+	{
+		id: 23,
+		image: djangoImage,
+		alt: 'django',
+	},
+	{
+		id: 24,
+		image: firebaseImage,
+		alt: 'firebase',
 	},
 ];
 const proyectList = [

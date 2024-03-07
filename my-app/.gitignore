@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 .borrado.js
+.README.md
+/.env
 
 # testing
 /coverage

@@ -21,6 +21,7 @@ export const SkillCard = styled(Container)`
 	-moz-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.73);
 	width: 8rem;
 	height: 8rem;
+	padding-bottom: 1em;
 	max-height: 95%;
 	margin: 0 1.5rem;
 	border-radius: 1rem;
@@ -31,18 +32,19 @@ export const SkillCard = styled(Container)`
 	}
 
 	img {
-		width: 20vmin;
-		height: 20vmin;
+		width: 15vmin;
+		height: 15vmin;
 
 		//breakpoints
 		@media (min-width: 480px) {
-			width: 15vmin;
-			height: 15vmin;
+			width: 9vmin;
+			height: 9vmin;
 		}
 
 		@media (min-width: 768px) {
-			width: 10vmin;
-			height: 10vmin;
+			width: 8vmin;
+			height: 8vmin;
+			/* padding-bottom: 6rem; */
 		}
 	}
 

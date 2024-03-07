@@ -1,125 +1,138 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { SectionContainer } from '../styles/UI/SectionContainer.styles';
 import {
 	FormContainer,
 	FormInnerContainer,
-	FullWidthTextArea,
 	InputField,
 	InputGroup,
 	SubmitButton,
 	TextAreaContainer,
 	TextAreaField,
-	ErrorMessageText,
 } from '../styles/Contact.styles';
-import axios from 'axios';
-import { ErrorMessage, Field, Formik } from 'formik';
+import { useFormik } from 'formik';
 import * as Yup from 'yup';
-
-const validationSchema = Yup.object().shape({
-	name: Yup.string().required('Name is required'),
-	email: Yup.string().email('Invalid email').required('Email is required'),
-	message: Yup.string().required('Message is required'),
-});
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-	// const [projects, setProjects] = useState([]);
-	// useEffect(() => {
-	// 	fetch('http://localhost:3001/api')
-	// 		.then((res) => res.json())
-	// 		.then((data) => setProjects(data.projects));
-	// }, []);
+	const [buttonState, setButtonState] = useState('Send Message');
+	const [emailSent, setEmailSent] = useState(false); // New state to track email sent status
 
-	// useEffect(() => {
-	// 	getQuote();
-	// }, []);
-	// function getQuote() {
-	// 	axios
-	// 		.get('http://localhost:3001/api', { crossdomain: true })
-	// 		.then((response) => {
-	// 			setProjects(response.data);
-	// 			// console.log(projects._id);
-	// 		})
-	// 		.catch((error) => {
-	// 			console.error('Error fetching data:', error);
-	// 		});
-	// }
+	const formik = useFormik({
+		// client-side form validation.
+		//we have created our initailValues object in a format EmailJS accepts
+		initialValues: {
+			from_name: '', //user name
+			to_name: process.env.REACT_APP_ADMIN_EMAIL, //email id of the admin
+			subject: '', // subject of email
+			reply_to: '', // user email
+			message: '', // message of email
+		},
+		validationSchema: Yup.object({
+			from_name: Yup.string().required('* Name field is required'),
+			subject: Yup.string().required('* Subject field is required'),
+			reply_to: Yup.string()
+				.email('Invalid email address')
+				.required('* Email field is required'),
+			message: Yup.string().required('* Message field is required'),
+		}),
 
-	const initialValues = {
-		name: '',
-		email: '',
-		subject: '',
-		message: '',
-	};
+		onSubmit: (values, { setSubmitting, resetForm }) => {
+			try {
+				emailjs
+					.send(
+						process.env.REACT_APP_FORMIK_SERVICE_ID,
+						process.env.REACT_APP_FORMIK_TEMPLATE_ID,
+						values,
+						process.env.REACT_APP_FORMIK_PUBLIC_KEY
+					)
+					.then(() => {
+						setButtonState('Send Email');
+						setSubmitting(false);
+						setButtonState('Message Sent');
+						setEmailSent(true);
+						setTimeout(() => {
+							setEmailSent(false);
+						}, 3000);
 
-	const handleSubmit = (values) => {
-		console.log(values);
-	};
+						resetForm();
+						console.log('SUCCESS!');
+					});
+			} catch (error) {
+				setButtonState('Send Email');
+				setSubmitting(false);
+				console.log('FAILED...', error.text);
+			}
+		},
+	});
 
 	return (
 		<SectionContainer id="contact">
 			<h3>Contact me:</h3>
 
 			<FormContainer>
-				<Formik
-					initialValues={initialValues}
-					validationSchema={validationSchema}
-					onSubmit={handleSubmit}
-				>
-					{({ errors, touched }) => (
+				<form onSubmit={formik.handleSubmit}>
+					{
 						<FormInnerContainer>
 							<InputGroup>
+								{/* name */}
 								<InputField
+									id="from_name"
+									name="from_name"
 									type="text"
-									id="name"
-									name="name"
-									placeholder="Name"
+									autoComplete="off"
+									placeholder="NAME"
+									onChange={formik.handleChange}
+									value={formik.values.from_name}
 									required
 								/>
-
+								{/* email */}
 								<InputField
+									id="reply_to"
 									type="email"
-									id="email"
-									name="email"
-									placeholder="Email"
+									name="reply_to"
+									placeholder="EMAIL"
+									autoComplete="off"
+									onChange={formik.handleChange}
+									value={formik.values.reply_to}
 									required
 								/>
 							</InputGroup>
-
 							<InputGroup>
+								{/* subject */}
 								<InputField
-									type="text"
 									id="subject"
 									name="subject"
-									placeholder="Subject"
+									type="text"
+									autoComplete="off"
+									placeholder="SUBJECT"
+									onChange={formik.handleChange}
+									value={formik.values.subject}
 									required
 								/>
 							</InputGroup>
-
 							<TextAreaContainer>
 								<TextAreaField
-									as={FullWidthTextArea}
 									id="message"
 									name="message"
-									rows="5"
-									placeholder="Message"
+									placeholder="MESSAGE"
+									autoComplete="off"
+									onChange={formik.handleChange}
+									value={formik.values.message}
 									required
 								/>
 							</TextAreaContainer>
-
-							<SubmitButton type="submit">Send Message</SubmitButton>
+							<SubmitButton type="submit" disabled={formik.isSubmitting}>
+								<span>{buttonState}</span>
+							</SubmitButton>
+							{emailSent && (
+								<div style={{ color: 'green' }}>
+									Your email has been successfully sent!
+								</div>
+							)}{' '}
 						</FormInnerContainer>
-					)}
-				</Formik>
+					}
+				</form>
 			</FormContainer>
-
-			{/* <h5>
-				{console.log(projects)}
-				{projects && projects.length > 0 ? (
-					projects.map((data) => <li key={data._id}>{data.name}</li>)
-				) : (
-					<p>No projects to display</p>
-				)}
-			</h5> */}
 		</SectionContainer>
 	);
 };
