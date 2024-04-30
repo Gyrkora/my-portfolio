@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-// import { proyectList } from '../data';
+// import React, { useEffect, useState } from 'react';
+import { proyectList } from '../data';
 import {
 	ProyectBack,
 	ProyectContainer,
@@ -15,10 +15,10 @@ import {
 	ButtonFrontCards,
 } from '../styles/UI/ButtonGeneral';
 import { redirectToExternalWebsite } from '../helpers/functions';
-import axios from 'axios';
+// import axios from 'axios';
 
 const ProyectItem = ({ type }) => {
-	const [proyectList, setProjects] = useState([]);
+	// const [proyectList, setProjects] = useState([]);
 
 	// useEffect(() => {
 	// 	fetch('http://localhost:3001/api')
@@ -26,26 +26,25 @@ const ProyectItem = ({ type }) => {
 	// 		.then((data) => setProjects(data.projects));
 	// }, []);
 
-	useEffect(() => {
-		getQuote();
-	}, []);
-	function getQuote() {
-		axios
-			.get('https://back-portfolio-4nf8.onrender.com/api', {
-				crossdomain: true,
-			})
-			.then((response) => {
-				setProjects(response.data);
-			})
-			.catch((error) => {
-				console.error('Error fetching data:', error);
-			});
-	}
+	// useEffect(() => {
+	// 	getQuote();
+	// }, []);
+	// function getQuote() {
+	// 	axios
+	// 		.get('https://back-portfolio-4nf8.onrender.com/api', {
+	// 			crossdomain: true,
+	// 		})
+	// 		.then((response) => {
+	// 			setProjects(response.data);
+	// 		})
+	// 		.catch((error) => {
+	// 			console.error('Error fetching data:', error);
+	// 		});
+	// }
 
 	return (
 		<div>
 			<ParentContainerProyects>
-				{/* {console.log(proyectListData)} */}
 				{proyectList.map((proj, index) => (
 					<ProyectContainer key={index}>
 						<ProyectFront>

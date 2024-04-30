@@ -1,17 +1,28 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const headingStyles_sections = css`
+	text-align: center;
+	font-weight: bold;
+	font-size: 55px;
+	color: #a93f55;
+
+	@media (min-width: 768px) {
+		text-align: left;
+	}
+`;
 
 export const SectionContainer = styled.div`
 	margin-bottom: 200px;
 
 	h3 {
-		text-align: center;
-		font-size: 55px;
-		color: #a93f55;
-		font-weight: bold;
+		${headingStyles_sections}
+	}
 
-		@media (min-width: 768px) {
-			text-align: left;
-		}
+	h4 {
+		text-align: center;
+		font-weight: bold;
+		font-size: 40px;
+		color: #a93f55;
 	}
 
 	h5 {
@@ -23,14 +34,7 @@ export const SectionContainer = styled.div`
 export const SkillSectionContainer = styled.div`
 	margin-bottom: 200px;
 	h3 {
-		text-align: center;
-		font-size: 55px;
-		color: #a93f55;
-		font-weight: bold;
-
-		@media (min-width: 768px) {
-			text-align: left;
-		}
+		${headingStyles_sections}
 	}
 
 	@media (max-width: 488px) {

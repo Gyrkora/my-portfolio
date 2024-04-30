@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const ParentContainerProyects = styled.div`
 	display: flex;
@@ -55,7 +55,7 @@ export const ProyectFront = styled.div`
 	flex-direction: column;
 	text-align: center;
 	padding: 2rem;
-	position: absolute;
+	/* position: absolute; */
 	width: 95%;
 	height: 100%;
 	-webkit-backface-visibility: hidden;
@@ -75,7 +75,7 @@ export const ProyectFront = styled.div`
 	}
 
 	h3 {
-		font-size: 30px;
+		font-size: 30px !important;
 		margin: 0;
 		position: absolute;
 		left: 40px;
@@ -88,7 +88,7 @@ export const ProyectFront = styled.div`
 
 	@media (min-width: 1430px) {
 		h2 {
-			font-size: 45px;
+			font-size: 35px;
 		}
 	}
 `;
@@ -96,7 +96,7 @@ export const ProyectFront = styled.div`
 export const ProyectBack = styled(ProyectFront)`
 	position: absolute;
 	h4 {
-		font-size: 30px;
+		font-size: 30px !important;
 		color: #4c86a8;
 		margin: 0;
 	}
@@ -126,3 +126,72 @@ export const ProyectDescriptionTitle = styled.div`
 export const ProyectDescriptionText = styled.div`
 	width: 90%;
 `;
+
+// ## Desktop Apps
+
+export const ProyectContainerDesktopApp = styled(ProyectContainer)`
+	border-top: 2px solid #4c86a8;
+	height: 350px;
+	position: relative !important;
+
+	@media (min-width: 1024px) {
+		&:hover {
+			transform: none;
+		}
+	}
+`;
+
+export const ProjectFrontDesktopApps = styled(ProyectFront)`
+	z-index: 10;
+	position: relative !important;
+	/* height: 400px; */
+`;
+
+export const SlidingContent = styled.div`
+	background-color: #1d1d1d;
+	color: #1d1d1d;
+	position: absolute;
+	top: 100%; // Empieza justo debajo de la tarjeta
+	left: 0;
+	width: 100%;
+	transition: transform 0.5s ease-in-out;
+	transform: translateY(100%); // Estado inicial
+	background-color: grey;
+	border-radius: 0 0 8px 8px;
+	background-color: #1d1d1d;
+
+	${({ isOpen }) =>
+		isOpen &&
+		css`
+			transition: all 0.5s ease-in-out;
+			transform: translateY(100%);
+			color: white;
+			border-bottom: 1px solid #ccc;
+		`};
+`;
+
+/*
+
+background-color: #1d1d1d;
+	color: white;
+	position: absolute;
+	top: 100%; // Empieza justo debajo de la tarjeta
+	left: 0;
+	width: 100%;
+	transition: transform 0.5s ease-in-out;
+	transform: translateY(0); // Estado inicial
+	border-bottom: 1px solid #ccc;
+	border-radius: 0 0 8px 8px;
+	display: ${({ isOpen }) =>
+		isOpen ? 'block' : 'none'}; // Controla la visibilidad basada en isOpen
+
+	${({ isOpen }) =>
+		isOpen &&
+		css`
+			transform: translateY(
+				-100%
+			); // Mueve el contenido hacia arriba para que sea visible
+		`}
+
+
+*/

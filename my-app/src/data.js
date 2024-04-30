@@ -167,9 +167,9 @@ const proyectList = [
 	},
 	{
 		id: 3,
-		language: 'React js',
-		name: 'Tienda Online',
-		alt: 'React js',
+		language: 'React - Django',
+		name: 'Women in History',
+		alt: 'React js y Python',
 		photo:
 			'https://c8.alamy.com/comp/2B098YD/quiz-test-survey-exam-vector-concept-quiz-online-on-laptop-vector-exam-for-education-illustration-of-quiz-test-2B098YD.jpg',
 		tools:
@@ -179,4 +179,42 @@ const proyectList = [
 	},
 ];
 
-export { imageList, proyectList };
+const proyectList2 = [
+	{
+		id: 1,
+		language: 'Python',
+		name: 'Women in Music',
+		alt: 'wordpress',
+		photo:
+			'https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg',
+		tools: 'HTML, Node-Sass, Javascript, Gulp, Git, Bootstrap, Nodemon',
+		code: 'https://github.com/Gyrkora/desafios-tow',
+		image: 'https://gyrkora.github.io/desafios-tow/',
+	},
+	{
+		id: 2,
+		language: 'Python',
+		name: 'Csv Editor',
+		alt: 'Js',
+		photo:
+			'https://blog.depositphotos.com/wp-content/uploads/2020/09/Vide-Infra.png.webp',
+		tools:
+			'HTML, TailwindCss, Javascript, Git , Nodejs - LocalStorage, SpeechRecognition Google Chrome API and Merrian-Webster’s API',
+		code: 'https://github.com/Gyrkora/desafios-tow',
+		image: 'https://gyrkora.github.io/desafios-tow/',
+	},
+	{
+		id: 3,
+		language: 'Python',
+		name: 'Youtube Downloader',
+		alt: 'React js y Python',
+		photo:
+			'https://c8.alamy.com/comp/2B098YD/quiz-test-survey-exam-vector-concept-quiz-online-on-laptop-vector-exam-for-education-illustration-of-quiz-test-2B098YD.jpg',
+		tools:
+			'Git, Styled-components, Firebase/Firestore, Formik, React dependencies (react-dom, react-router-dom, etc.) and Reactt Hooks. ',
+		code: 'https://github.com/Gyrkora/desafios-tow',
+		image: 'https://gyrkora.github.io/desafios-tow/',
+	},
+];
+
+export { imageList, proyectList, proyectList2 };

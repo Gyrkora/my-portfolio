@@ -52,10 +52,10 @@ const Contact = () => {
 						setEmailSent(true);
 						setTimeout(() => {
 							setEmailSent(false);
+							setButtonState('Send Email');
 						}, 3000);
 
 						resetForm();
-						console.log('SUCCESS!');
 					});
 			} catch (error) {
 				setButtonState('Send Email');
