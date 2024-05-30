@@ -34,7 +34,7 @@ export const ButtonCardsContainer = styled.div`
 	max-width: 80%;
 	flex-direction: column;
 
-	@media (min-width: 600px) {
+	@media (min-width: 1024px) {
 		flex-direction: row;
 	}
 `;
@@ -52,19 +52,47 @@ export const ButtonBackCards = styled(ButtonOriginal)`
 			padding: 12px 40px;
 		}
 	}
+
+	@media (max-width: 766px) {
+		display: none;
+	}
 `;
-export const ButtonFrontCards = styled(ButtonBackCards)`
+export const ButtonFrontCards = styled(ButtonOriginal)`
 	padding: 12px 30px;
 	font-size: 15px;
 	margin: 15px 10px 0 10px;
+	color: #a93f55;
 
 	/* @media (max-width: 766px) and (min-width: 600px) {
 		flex-wrap: nowrap;
 	} */
 
+	@media (min-width: 768px) {
+		transition: all 0.5s ease-in-out;
+		margin: 50px 10px 0 10px;
+
+		&:hover {
+			padding: 12px 40px;
+		}
+	}
+
 	@media (min-width: 1024px) {
 		display: none;
 	}
+
+	/* @media (max-width: 766px) {
+		display: flex;
+	} */
+`;
+
+export const ButtonFrontMoreInfo = styled(ButtonFrontCards)`
+	color: white !important;
+	width: 150px;
+	text-align: center;
+
+	/* @media (min-width: 480px) {
+		display: none;
+	} */
 `;
 
 export const ButtonFrontCardsDesktopApps = styled(ButtonFrontCards)`

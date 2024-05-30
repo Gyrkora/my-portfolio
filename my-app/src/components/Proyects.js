@@ -5,7 +5,7 @@ import ProyectItem from './ProyectItem';
 const Proyects = () => {
 	return (
 		<SectionContainer>
-			<h3 id="proyects">My Projects</h3>
+			<h3 id="projects">My Projects</h3>
 			<h4 id="web-apps">Web Apps</h4>
 			<ProyectItem />
 

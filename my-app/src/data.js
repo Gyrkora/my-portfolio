@@ -157,9 +157,12 @@ const proyectList = [
 		name: 'TOW Spanish',
 		alt: 'wordpress',
 		photo: towImage,
-		tools: 'HTML, Node-Sass, Javascript, Gulp, Git, Bootstrap, Nodemon',
+		tools:
+			'Wordpress, PHP, Plugins, Css, Javascript, Google Analytics, Podcast Platform, H5P',
 		code: 'https://github.com/Gyrkora/desafios-tow',
 		demo: 'https://theotherwayspanish.com/en/hello-tow-spanish-students/',
+		descripton:
+			'A language school that teaches Spanish with different tools and technologies',
 	},
 	{
 		id: 2,
@@ -171,6 +174,7 @@ const proyectList = [
 			'HTML, TailwindCss, Javascript, Git , Nodejs - LocalStorage, SpeechRecognition Google Chrome API and Merrian-Webster’s API',
 		code: 'https://github.com/Gyrkora/desafios-tow',
 		demo: 'https://gyrkora.github.io/desafios-tow/',
+		descripton: 'A quiz platform to evaluate your Spanish',
 	},
 	{
 		id: 3,
@@ -179,9 +183,11 @@ const proyectList = [
 		alt: 'React js y Python',
 		photo: womendbImage,
 		tools:
-			'Git, Styled-components, Firebase/Firestore, Formik, React dependencies (react-dom, react-router-dom, etc.) and Reactt Hooks. ',
+			'Git, Styled-components, Formik, Django, Python, Postgres, Javascript, React, Django Rest-Framework ',
 		code: 'https://github.com/Gyrkora/womendb/tree/main/client/src',
 		demo: 'https://womendb.vercel.app',
+		descripton:
+			'A women opensource project that seeks to provide information about women in the world',
 	},
 ];
 

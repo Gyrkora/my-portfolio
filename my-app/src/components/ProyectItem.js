@@ -13,16 +13,39 @@ import {
 	ButtonBackCards,
 	ButtonCardsContainer,
 	ButtonFrontCards,
+	ButtonFrontMoreInfo,
 } from '../styles/UI/ButtonGeneral';
 import { redirectToExternalWebsite } from '../helpers/functions';
+import { useState } from 'react';
+import { useEffect } from 'react';
 // import axios from 'axios';
 
 const ProyectItem = ({ type }) => {
+	const [isFlipped, setIsFlipped] = useState(false);
+	const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+
+	const handleResize = () => {
+		setIsMobile(window.innerWidth < 1024);
+	};
+
+	useEffect(() => {
+		window.addEventListener('resize', handleResize);
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
+	const handleFlip = () => {
+		if (isMobile) {
+			setIsFlipped(!isFlipped);
+		}
+	};
+
 	return (
 		<div>
 			<ParentContainerProyects>
 				{proyectList.map((proj, index) => (
-					<ProyectContainer key={index}>
+					<ProyectContainer key={index} isFlipped={isFlipped}>
 						<ProyectFront>
 							<h3>{proj.language}</h3>
 							<h2>{proj.name}</h2>
@@ -41,6 +64,14 @@ const ProyectItem = ({ type }) => {
 									label={'CODE'}
 									onClick={() => redirectToExternalWebsite(proj.code)}
 								></ButtonFrontCards>
+								{isMobile && (
+									<ButtonFrontMoreInfo
+										bColor={'transparent'}
+										pX={'20rem'}
+										label={'More info'}
+										onClick={handleFlip}
+									></ButtonFrontMoreInfo>
+								)}
 							</ButtonCardsContainer>
 						</ProyectFront>
 
@@ -53,7 +84,7 @@ const ProyectItem = ({ type }) => {
 								</ProyectDescriptionTitle>
 
 								<ProyectDescriptionText>
-									<p>Quiz platform to evaluate your Spanish</p>
+									<p>{proj.descripton}</p>
 								</ProyectDescriptionText>
 							</ProyectBackDescription>
 							<ProyectBackDescription>
@@ -78,6 +109,14 @@ const ProyectItem = ({ type }) => {
 									label={'CODE'}
 									onClick={() => redirectToExternalWebsite(proj.code)}
 								></ButtonBackCards>
+								{isMobile && (
+									<ButtonFrontMoreInfo
+										bColor={'transparent'}
+										pX={'20rem'}
+										label={'More info'}
+										onClick={handleFlip}
+									></ButtonFrontMoreInfo>
+								)}
 							</ButtonCardsContainer>
 						</ProyectBack>
 					</ProyectContainer>

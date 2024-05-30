@@ -20,7 +20,7 @@ export const ProyectContainer = styled.div`
 	max-width: 90%;
 	width: 700px;
 	max-height: 95%;
-	height: 40rem;
+	height: 50rem;
 
 	box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.73);
 	-webkit-box-shadow: -1px 8px 20px 0px rgba(0, 0, 0, 0.73);
@@ -31,6 +31,12 @@ export const ProyectContainer = styled.div`
 	background-color: #1d1d1d;
 	transition: transform 0.5s;
 	transform-style: preserve-3d;
+	transform: ${(props) =>
+		props.isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'};
+
+	@media (min-width: 480px) {
+		height: 45rem;
+	}
 
 	@media (min-width: 1400px) {
 		max-width: 90%;
@@ -43,7 +49,9 @@ export const ProyectContainer = styled.div`
 
 	@media (min-width: 1024px) {
 		&:hover {
-			transform: rotateY(180deg);
+			transform: ${(props) => !props.isMobile && 'rotateY(180deg)'};
+
+			/* transform: rotateY(180deg); */
 		}
 	}
 `;
@@ -58,13 +66,14 @@ export const ProyectFront = styled.div`
 	/* position: absolute; */
 	width: 95%;
 	height: 100%;
-	-webkit-backface-visibility: hidden;
+	/* -webkit-backface-visibility: hidden; */
 	backface-visibility: hidden;
 	position: relative;
+	transform-style: preserve-3d;
 
 	h2 {
 		font-size: 40px;
-		margin-bottom: 70px;
+		margin-bottom: 40px;
 		color: white;
 	}
 
@@ -76,10 +85,12 @@ export const ProyectFront = styled.div`
 
 	h3 {
 		font-size: 30px !important;
-		margin: 0;
+		align-items: center;
+		margin: 3px;
+		/* margin: 0;
 		position: absolute;
-		left: 40px;
-		top: 60px;
+		left: 60px;
+		top: 40px; */
 	}
 
 	p {
@@ -91,10 +102,30 @@ export const ProyectFront = styled.div`
 			font-size: 35px;
 		}
 	}
+
+	@media (min-width: 780px) {
+		h3 {
+			font-size: 30px !important;
+			margin: 0;
+			position: absolute;
+			left: 40px;
+			top: 60px;
+		}
+
+		height: 100%;
+	}
+
+	@media (min-width: 480px) {
+		h2 {
+			margin-bottom: 70px;
+		}
+	}
 `;
 
 export const ProyectBack = styled(ProyectFront)`
 	position: absolute;
+	transform-style: preserve-3d;
+
 	h4 {
 		font-size: 30px !important;
 		color: #4c86a8;

@@ -9,34 +9,37 @@ import { Pagination, Grid, Autoplay } from 'swiper';
 import { imageList } from '../data';
 import { TotalCenteredContainer } from '../styles/UI/Containers.styles';
 import { CarouselSkillContainer } from '../styles/Carousel.styles';
+import { SectionContainer } from '../styles/UI/SectionContainer.styles';
 
 const CarouselSkill = () => {
 	return (
-		<CarouselSkillContainer style={{ marginBottom: '4rem' }}>
-			<Swiper
-				slidesPerView={1}
-				spaceBetween={1}
-				pagination={{
-					clickable: true,
-				}}
-				autoplay={{
-					delay: 1500,
-					disableOnInteraction: false,
-				}}
-				modules={[Autoplay, Grid, Pagination]}
-				className="mySwiper"
-			>
-				{imageList.map((img, index) => (
-					<SwiperSlide key={index}>
-						<div>
-							<TotalCenteredContainer>
-								<img src={img.image} alt={img.alt} />
-							</TotalCenteredContainer>
-						</div>
-					</SwiperSlide>
-				))}
-			</Swiper>
-		</CarouselSkillContainer>
+		<SectionContainer>
+			<CarouselSkillContainer style={{ marginBottom: '4rem' }}>
+				<Swiper
+					slidesPerView={1}
+					spaceBetween={1}
+					pagination={{
+						clickable: true,
+					}}
+					autoplay={{
+						delay: 1500,
+						disableOnInteraction: false,
+					}}
+					modules={[Autoplay, Grid, Pagination]}
+					className="mySwiper"
+				>
+					{imageList.map((img, index) => (
+						<SwiperSlide key={index}>
+							<div>
+								<TotalCenteredContainer>
+									<img src={img.image} alt={img.alt} />
+								</TotalCenteredContainer>
+							</div>
+						</SwiperSlide>
+					))}
+				</Swiper>
+			</CarouselSkillContainer>
+		</SectionContainer>
 	);
 };
 
