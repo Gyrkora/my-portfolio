@@ -9,8 +9,8 @@ const Proyects = () => {
 			<h4 id="web-apps">Web Apps</h4>
 			<ProyectItem />
 
-			<h4 id="desktop-apps">Desktop Apps</h4>
-			<ProjectItem2 />
+			{/* <h4 id="desktop-apps">Desktop Apps</h4>
+			<ProjectItem2 /> */}
 		</SectionContainer>
 	);
 };

@@ -21,6 +21,10 @@ import mysql from './assets/mysql.svg';
 import expressImage from './assets/express.svg';
 import djangoImage from './assets/django.svg';
 import firebaseImage from './assets/firebase.svg';
+import moodle from './assets/moodle.svg';
+import towImage from './assets/projects/tow.jpg';
+import womendbImage from './assets/projects/womendb.svg';
+import desafiostowImage from './assets/projects/desafiostow.jpg';
 
 const imageList = [
 	{
@@ -140,6 +144,11 @@ const imageList = [
 		image: firebaseImage,
 		alt: 'firebase',
 	},
+	{
+		id: 25,
+		image: moodle,
+		alt: 'Moodle',
+	},
 ];
 const proyectList = [
 	{
@@ -147,19 +156,17 @@ const proyectList = [
 		language: 'Wordpress',
 		name: 'TOW Spanish',
 		alt: 'wordpress',
-		photo:
-			'https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg',
+		photo: towImage,
 		tools: 'HTML, Node-Sass, Javascript, Gulp, Git, Bootstrap, Nodemon',
 		code: 'https://github.com/Gyrkora/desafios-tow',
-		demo: 'https://gyrkora.github.io/desafios-tow/',
+		demo: 'https://theotherwayspanish.com/en/hello-tow-spanish-students/',
 	},
 	{
 		id: 2,
 		language: 'Javascript',
 		name: 'Desafíos TOW',
 		alt: 'Js',
-		photo:
-			'https://blog.depositphotos.com/wp-content/uploads/2020/09/Vide-Infra.png.webp',
+		photo: desafiostowImage,
 		tools:
 			'HTML, TailwindCss, Javascript, Git , Nodejs - LocalStorage, SpeechRecognition Google Chrome API and Merrian-Webster’s API',
 		code: 'https://github.com/Gyrkora/desafios-tow',
@@ -168,14 +175,13 @@ const proyectList = [
 	{
 		id: 3,
 		language: 'React - Django',
-		name: 'Women in History',
+		name: 'Women Database',
 		alt: 'React js y Python',
-		photo:
-			'https://c8.alamy.com/comp/2B098YD/quiz-test-survey-exam-vector-concept-quiz-online-on-laptop-vector-exam-for-education-illustration-of-quiz-test-2B098YD.jpg',
+		photo: womendbImage,
 		tools:
 			'Git, Styled-components, Firebase/Firestore, Formik, React dependencies (react-dom, react-router-dom, etc.) and Reactt Hooks. ',
-		code: 'https://github.com/Gyrkora/desafios-tow',
-		demo: 'https://gyrkora.github.io/desafios-tow/',
+		code: 'https://github.com/Gyrkora/womendb/tree/main/client/src',
+		demo: 'https://womendb.vercel.app',
 	},
 ];
 
@@ -184,7 +190,7 @@ const proyectList2 = [
 		id: 1,
 		language: 'Python',
 		name: 'Women in Music',
-		alt: 'wordpress',
+		alt: 'Python-Django',
 		photo:
 			'https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg',
 		tools: 'HTML, Node-Sass, Javascript, Gulp, Git, Bootstrap, Nodemon',
@@ -194,7 +200,7 @@ const proyectList2 = [
 	{
 		id: 2,
 		language: 'Python',
-		name: 'Csv Editor',
+		name: 'CSV Editor',
 		alt: 'Js',
 		photo:
 			'https://blog.depositphotos.com/wp-content/uploads/2020/09/Vide-Infra.png.webp',

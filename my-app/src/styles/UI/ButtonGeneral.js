@@ -66,3 +66,12 @@ export const ButtonFrontCards = styled(ButtonBackCards)`
 		display: none;
 	}
 `;
+
+export const ButtonFrontCardsDesktopApps = styled(ButtonFrontCards)`
+	@media (min-width: 769px) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+`;

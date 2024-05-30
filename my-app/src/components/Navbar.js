@@ -44,7 +44,7 @@ const Navbar = () => {
 							offset={-100}
 							duration={400}
 						>
-							Proyects
+							Projects
 						</NavbarLink>
 						<NavbarLink
 							to="skills"
@@ -55,7 +55,7 @@ const Navbar = () => {
 						>
 							Skills
 						</NavbarLink>
-						<NavbarLink
+						{/* <NavbarLink
 							to="blog"
 							spy={true}
 							smooth={true}
@@ -63,7 +63,7 @@ const Navbar = () => {
 							duration={500}
 						>
 							Blog
-						</NavbarLink>
+						</NavbarLink> */}
 						<NavbarLink
 							to="contact"
 							spy={true}
