@@ -24,7 +24,7 @@ import firebaseImage from './assets/firebase.svg';
 import moodle from './assets/moodle.svg';
 import towImage from './assets/projects/tow.jpg';
 import womendbImage from './assets/projects/womendb.svg';
-import desafiostowImage from './assets/projects/desafiostow.jpg';
+import vocabulary_app from './assets/projects/vocabulary_app.jpg';
 
 const imageList = [
 	{
@@ -166,18 +166,6 @@ const proyectList = [
 	},
 	{
 		id: 2,
-		language: 'Javascript',
-		name: 'Desafíos TOW',
-		alt: 'Js',
-		photo: desafiostowImage,
-		tools:
-			'HTML, TailwindCss, Javascript, Git , Nodejs - LocalStorage, SpeechRecognition Google Chrome API and Merrian-Webster’s API',
-		code: 'https://github.com/Gyrkora/desafios-tow',
-		demo: 'https://gyrkora.github.io/desafios-tow/',
-		descripton: 'A quiz platform to evaluate your Spanish',
-	},
-	{
-		id: 3,
 		language: 'React - Django',
 		name: 'Women Database',
 		alt: 'React js y Python',
@@ -188,6 +176,19 @@ const proyectList = [
 		demo: 'https://womendb.vercel.app',
 		descripton:
 			'A women opensource project that seeks to provide information about women in the world',
+
+	},
+	{
+		id: 3,
+		language: 'Javascript',
+		name: 'Vocabulary App',
+		alt: 'Js',
+		photo: vocabulary_app,
+		tools:
+			'HTML, Css, Javascript, Git , Nodejs - LocalStorage, SpeechRecognition Google Chrome API and Merrian-Webster’s API',
+		code: 'https://github.com/Gyrkora/vocabulary_app',
+		demo: 'https://gyrkora.github.io/vocabulary_app',
+		descripton: 'A vocabulary app to learn and practice your vocabulary in different languages',
 	},
 ];
 
